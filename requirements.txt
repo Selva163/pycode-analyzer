@@ -1,0 +1,7 @@
+isort
+black
+flake8
+interrogate
+whispers
+hardcodes
+pylint
