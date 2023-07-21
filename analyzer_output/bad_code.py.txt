@@ -1,0 +1,73 @@
+Code checks
+
+isort_cmd
+****************
+
+
+black_cmd
+****************
+b'All done! \\u2728 \\U0001f370 \\u2728'
+b'1 file left unchanged.'
+
+
+flake8_cmd
+****************
+b'D:\\codering\\pycode_analyzer\\scripts\\bad_code.py:20:80: E501 line too long (92 > 79 characters)'
+b"D:\\codering\\pycode_analyzer\\scripts\\bad_code.py:43:5: F701 'break' outside loop"
+b"D:\\codering\\pycode_analyzer\\scripts\\bad_code.py:44:1: F706 'return' outside function"
+
+
+interrogate_cmd
+****************
+b'============== Coverage for D:\\codering\\pycode_analyzer\\scripts\\ =============='
+b'------------------------------ Detailed Coverage ------------------------------'
+b'| Name                                        |                        Status |'
+b'|---------------------------------------------|-------------------------------|'
+b'| bad_code.py (module)                        |                        MISSED |'
+b'|   donothingfunc (L4)                        |                        MISSED |'
+b'|---------------------------------------------|-------------------------------|'
+b''
+b'----------------------------------- Summary -----------------------------------'
+b'| Name                |       Total |       Miss |       Cover |       Cover% |'
+b'|---------------------|-------------|------------|-------------|--------------|'
+b'| bad_code.py         |           2 |          2 |           0 |           0% |'
+b'|---------------------|-------------|------------|-------------|--------------|'
+b'| TOTAL               |           2 |          2 |           0 |         0.0% |'
+b'---------------- RESULT: FAILED (minimum: 80.0%, actual: 0.0%) ----------------'
+
+
+whispers_cmd
+****************
+b'[{"key": "api_key", "value": "sldkf090-dummykey-kj454k4007", "file": "D:/codering/pycode_analyzer/scripts/bad_code.py", "line": 8, "rule_id": "apikey", "message": "API key", "severity": "MAJOR"}]'
+
+
+hardcodes_cmd
+****************
+b"('Time', 8)"
+b"('Function', 1)"
+b"('sldkf090-dummykey-kj454k4007', 1)"
+b"('Content-type', 1)"
+b"('application/json', 1)"
+b"('Authorization', 1)"
+b"('ApiKey {api_key}', 1)"
+b"('https://someurl', 1)"
+b"('Extremely inefficient and pointless time loop, purposefully making bad source code', 1)"
+b'("Featured on \'what a waste of time\'", 1)'
+b"('Press [ENTER] key to quit', 1)"
+
+
+pylint_cmd
+****************
+b'************* Module bad_code'
+b'scripts\\bad_code.py:1:0: C0114: Missing module docstring (missing-module-docstring)'
+b'scripts\\bad_code.py:4:0: C0116: Missing function or method docstring (missing-function-docstring)'
+b'scripts\\bad_code.py:8:0: C0103: Constant name "api_key" doesn\'t conform to UPPER_CASE naming style (invalid-name)'
+b"scripts\\bad_code.py:14:0: W3101: Missing timeout argument for method 'requests.get' can cause your program to hang indefinitely (missing-timeout)"
+b'scripts\\bad_code.py:16:0: C0103: Constant name "time" doesn\'t conform to UPPER_CASE naming style (invalid-name)'
+b'scripts\\bad_code.py:17:0: C0103: Constant name "loop" doesn\'t conform to UPPER_CASE naming style (invalid-name)'
+b"scripts\\bad_code.py:43:4: E0103: 'break' not properly in loop (not-in-loop)"
+b'scripts\\bad_code.py:44:0: E0104: Return outside function (return-outside-function)'
+b''
+b'-----------------------------------'
+b'Your code has been rated at 4.84/10'
+b''
